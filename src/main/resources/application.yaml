@@ -1,0 +1,25 @@
+jwt:
+  secret: COtIUcDZUREOrAfYNYgRXtlDXlSdGlmMqtK6rsNm0rnsW1avKJ7wAS5uEwajDYX5Mrnw0ZIej0A3B+iobAQ4Xw==
+  valid-for: 10M
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: app
+    password:
+
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        ddl-auto: update
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-ui
+  application:
+    name: notes-app
+server:
+  port: 8080
